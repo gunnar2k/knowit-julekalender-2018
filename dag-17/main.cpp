@@ -23,6 +23,8 @@ float distance(Point a, Point b) {
 }
 
 int main() {
+  auto begin = chrono::high_resolution_clock::now();
+
   // Get the points from the input
   ifstream file("input.txt");
   string line;
@@ -65,6 +67,9 @@ int main() {
   }
 
   cout << "Answer:" << round(shortest) << endl;
+
+  auto end = chrono::high_resolution_clock::now();
+  cout << chrono::duration_cast<chrono::milliseconds>(end-begin).count() << "ms" << endl;
 
   return 0;
 }
