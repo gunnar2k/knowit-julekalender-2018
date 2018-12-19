@@ -48,8 +48,8 @@ int main() {
   for (int i=0; i < points.size(); i++) {
     vector<int> vertex;
     for (int j = 0; j < points.size(); j++)
-        if (i != j)
-          vertex.push_back(j);
+      if (i != j)
+        vertex.push_back(j);
 
     while (next_permutation(vertex.begin(), vertex.end())) {
       float path_length = 0;
